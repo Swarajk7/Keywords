@@ -1,0 +1,88 @@
+{
+  "__comment": "Everything starting with __ will be ignored.",
+  "sitemap_spider_data": [
+    {
+      "sitemap": "https://engineering.bittorrent.com/wp-sitemap-posts-post-1.xml",
+      "company_name": "BitTorrent"
+    },
+    {
+      "sitemap": "https://www.bigeng.io/sitemap-posts.xml",
+      "company_name": "Think Big"
+    },
+    {
+      "sitemap": "https://word.bitly.com/sitemap1.xml",
+      "company_name": "Bitly"
+    },
+    {
+      "sitemap": "https://deepmind.com/sitemap.xml",
+      "url_valid_regex": "deepmind.com/blog/article/",
+      "company_name": "DeepMind"
+    },
+    {
+      "sitemap": "https://openai.com/sitemap-posts.xml",
+      "company_name": "OpenAI"
+    },
+    {
+      "sitemap": "https://eng.uber.com/post-sitemap.xml",
+      "company_name": "Uber"
+    },
+    {
+      "sitemap": "https://airtame.engineering/sitemap/sitemap.xml",
+      "company_name": "Airtame"
+    },
+    {
+      "sitemap": "https://developers.500px.com/sitemap/sitemap.xml",
+      "company_name": "500px"
+    },
+    {
+      "sitemap": "https://airbrake.io/post-sitemap.xml",
+      "company_name": "Airbrake",
+      "url_valid_regex": "^(?!.*(news|report)).*$"
+    },
+    {
+      "sitemap": "https://advancedweb.hu/sitemap.xml",
+      "company_name": "Advanced Web Machinery",
+      "url_valid_regex": "^(?!.*(html|books)).*$"
+    }
+  ],
+  "crawl_spider_data": [
+    {
+      "start_url": "https://ai.googleblog.com/",
+      "company_name": "Google AI",
+      "link_extractor_rule": {
+        "allow": [".*ai.googleblog.com/.*"]
+      },
+      "url_valid_regex": ".*html",
+      "xpath_config": {
+        "body": "//div[@class= 'post-body']",
+        "title": "//h2/a"
+      }
+    }
+  ],
+  "__crawls": [
+    {
+      "start_url": "https://tech.nextroll.com/blog",
+      "company_name": "NextRoll",
+      "link_extractor_rule": {
+        "allow": ["https://tech.nextroll.com/blog"]
+      },
+      "url_valid_regex": ".*html$"
+    },
+    {
+      "start_url": "https://8thlight.com/blog/",
+      "company_name": "8th Light",
+      "link_extractor_rule": {
+        "allow": ["https://8thlight.com/blog/"]
+      },
+      "url_valid_regex": ".*html$"
+    },
+    {
+      "start_url": "https://99designs.com/blog/engineering/",
+      "company_name": "99designs",
+      "link_extractor_rule": {
+        "allow": ["https://99designs.com/blog/engineering/"]
+      },
+      "url_valid_regex": "https://99designs.com/blog/engineering/.*/$"
+    }
+  ]
+}
